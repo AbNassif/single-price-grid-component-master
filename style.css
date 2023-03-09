@@ -1,0 +1,235 @@
+/****************************************** 
+            TABLE OF CONTENTS
+-------------------------------------------
+
+1.DEFAULTS
+2.MAIN
+******************************************/
+
+/****************************************** 
+               1.DEFAULTS
+******************************************/
+@font-face {
+  font-family: "Karla";
+  src: url("./font/Karla-VariableFont_wght.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla";
+}
+
+:root {
+  /* PRIMARY COLORS */
+  --cyan: hsl(179, 62%, 43%);
+  --brightYellow: hsl(71, 73%, 54%);
+
+  /* NEUTRAL COLORS*/
+  --lightGray: hsl(204, 43%, 93%);
+  --grayishBlue: hsl(218, 22%, 67%);
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--lightGray);
+  padding: 2rem;
+}
+
+/****************************************** 
+                  2.MAIN
+******************************************/
+
+main {
+  width: 100%;
+  max-width: 636px;
+  height: 475px;
+  background-color: white;
+  display: grid;
+  grid-template-rows: 1.65fr 2fr;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 10px;
+}
+
+.joinUs {
+  grid-column: 1 / 3;
+  padding: 2.5rem;
+  border-radius: 10px 10px 0 0;
+}
+
+.joinUs h1 {
+  font-size: 1.5rem;
+  color: var(--cyan);
+  margin-bottom: 1.5rem;
+}
+
+.joinUs h2 {
+  font-size: 1.1rem;
+  color: var(--brightYellow);
+  margin-bottom: 0.85rem;
+}
+
+.joinUs p {
+  font-size: 1rem;
+  color: var(--grayishBlue);
+  line-height: 1.6rem;
+  font-weight: 400;
+}
+
+.subscribe,
+.whyUs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.5rem;
+}
+.subscribe {
+  background-color: var(--cyan);
+  border-bottom-left-radius: 10px;
+}
+
+.subscribe h1,
+.whyUs h1 {
+  font-size: 1.1rem;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.pricing h1 {
+  font-size: 2rem;
+}
+
+.pricing h1 span {
+  display: inline-block;
+  margin-left: 0.9rem;
+  font-size: 1rem;
+  font-weight: 100;
+  color: var(--lightGray);
+}
+
+.pricing p {
+  color: white;
+  font-weight: 300;
+  margin-top: 5px;
+}
+.subscribe button {
+  height: 48px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--brightYellow);
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+}
+
+.whyUs {
+  background-color: #4abebd;
+  border-bottom-right-radius: 10px;
+}
+
+.whyUs h1 {
+  margin-bottom: 1rem;
+}
+.whyUs p {
+  color: white;
+  padding-right: 4rem;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 1.3rem;
+}
+
+footer {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  bottom: 2px;
+  left: 50%;
+  text-align: center;
+}
+
+footer p {
+  color: var(--cyan);
+  font-weight: bolder;
+}
+
+footer p a {
+  color: var(--grayishBlue);
+}
+
+@media only screen and (max-width: 695px) {
+  .whyUs p {
+    padding-right: 3vw;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  body {
+    flex-direction: column;
+  }
+  .whyUs p {
+    padding-right: 0;
+  }
+
+  .joinUs p {
+    font-size: 0.8rem;
+  }
+
+  .joinUs h2 {
+    font-size: 1rem;
+  }
+
+  .joinUs h1 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  main {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: unset;
+    height: unset;
+  }
+
+  .joinUs {
+    grid-column: unset !important;
+    padding: 2.5rem;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .subscribe,
+  .whyUs,
+  .joinUs,
+  main {
+    border-radius: unset !important;
+  }
+
+  .subscribe,
+  .whyUs,
+  .joinUs {
+    padding: 1.5rem;
+  }
+
+  .whyUs {
+    display: block;
+  }
+
+  .whyUs p {
+    margin-top: 10px;
+  }
+
+  footer {
+    position: static;
+    transform: unset;
+    margin-top: 5rem;
+  }
+}
